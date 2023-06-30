@@ -15,6 +15,18 @@ def resume():
 def projects():
     return render_template('project.html')
 
+@app.route('/nlpprojects')
+def nlpprojects():
+    return render_template('nlpproject.html')
+
+@app.route('/mlprojects')
+def mlprojects():
+    return render_template('mlproject.html')
+
+@app.route('/cvprojects')
+def cvprojects():
+    return render_template('cvproject.html')
+
 
 if __name__=="__main__":
     app.run(debug=True)

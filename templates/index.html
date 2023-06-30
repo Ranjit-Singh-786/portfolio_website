@@ -43,13 +43,14 @@
         <img src="static/assets/img/profile-img.jpg" alt="" class="img-fluid rounded-circle">
         <h1 class="text-light"><a href="index.html">Ranjit Singh</a></h1>
         <div class="social-links mt-3 text-center">
-          <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
-          <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
-          <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
-          <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
-          <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+          <a href="smartengineer0786@gmail.com" type="email" class="twitter"><i class="bi bi-envelope"></i></a>
+          <a href="https://www.facebook.com/ranjeetsingh.singh.56027" class="facebook"><i class="bx bxl-facebook"></i></a>
+          <!-- <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a> -->
+          <a href="https://github.com/Ranjit-Singh-786" class="google-plus"><i class="bi bi-github"></i></a>
+          <a href="https://www.linkedin.com/in/ranjit-singh-423a051a6" class="linkedin"><i class="bx bxl-linkedin"></i></a>
         </div>
       </div>
+
 
       <nav id="navbar" class="nav-menu navbar">
         <ul>
@@ -311,7 +312,17 @@
 
         <div class="section-title">
           <h2>Resume</h2>
-          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+          <p>
+            Welcome to the resume section of my portfolio website, where you'll discover
+             a comprehensive overview of my professional journey and achievements. 
+             This section serves as a gateway to my skills, experiences, and qualifications,
+              allowing you to delve into the depths of my expertise. From my educational background
+               to my notable projects and industry accolades, this carefully curated collection offers
+                a glimpse into my capabilities and showcases my commitment to excellence. 
+                Whether you're an employer seeking a dedicated professional or a client searching for
+                 a skilled collaborator, this resume section provides a concise snapshot of my career trajectory, 
+                 highlighting why I am the ideal candidate for your next venture. So, take a moment to explore my 
+                 accomplishments and discover the unique value I bring to the table.</p>
         </div>
 
         <div class="row">
@@ -445,11 +456,13 @@
   <div class="row ml-5">
     <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-12 ">
       <div class="card" id="cardshdw" style="width: 200px; height: 375px;">
-        <img src="static/assets/img/profile-img.jpg" height="200px" class="card-img">
+        <img src="static/assets/img/projectimage/ml1.png" height="200px" class="card-img">
         <div class="card-body">
-          <h5 class="display-9">Ranjit Singh</h5>
-          <p style="text-align:right; color:rgba(0, 0, 255, 0.561);">web devlopper!</p>
-          <button class="btn btn-outline-danger btn-block">more details</button>
+          <h5 class="display-9">Machine Learning Projects</h5>
+          <hr color="black">
+          <form action="{{ url_for('mlprojects') }}">
+          <button type="submit" class="btn btn-outline-danger btn-block">more details</button>
+           </form>
         </div>
       </div>
     </div>
@@ -457,10 +470,13 @@
 
   <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-12">
     <div class="card" id="cardshdw1"  style="width: 200px; height: 375px;">
-        <img src="static/assets/img/profile-img.jpg" height="200px" class="card-img">
+        <img src="static/assets/img/projectimage/cv2.jpg" height="200px" class="card-img">
         <div class="card-body">
-          <h5 class="display-9">Ranjit Singh</h5>                <p class="text-primary">jai ho meri shairo wali</p>
-          <button class="btn btn-outline-warning btn-block">more details</button>
+          <h5 class="display-9">computer vision Projects</h5> 
+          <hr color="black">
+          <form action="{{ url_for('cvprojects') }}">
+          <button type="submit" class="btn btn-outline-warning btn-block">more details</button>
+        </form>
         </div>
       </div>
     </div>
@@ -468,10 +484,14 @@
 
     <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-12">
       <div class="card" id="cardshdw2"  style="width: 200px; height:375px;">
-        <img src="static/assets/img/profile-img.jpg" height="200px" class="card-img">
+        <img src="static/assets/img/projectimage/nlp1.jpg" height="200px" class="card-img">
         <div class="card-body">
-          <h5 class="display-9">Ranjit Singh</h5>                <p style="text-align: right; color: blue">web devloper!</p>
-          <button class="btn btn-outline-danger btn-block">more details</button>
+          <h5 class="display-9">Natural language processing Projects</h5>  
+            <!-- <p style="text-align: right; color: blue">web devloper!</p> -->
+          <hr color="black">
+          <form action="{{ url_for('nlpprojects') }}">
+          <button type="submit" class="btn btn-outline-danger btn-block">more details</button>
+          </form>
         </div>
       </div>
     </div>
@@ -481,6 +501,7 @@
   <button class="btn btn-outline-danger btn-block">other all projects here.</button>
 
 </form>
+<hr color="black">
 <br>
 
 
@@ -498,32 +519,60 @@
           <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up">
             <div class="icon"><i class="bi bi-briefcase"></i></div>
             <h4 class="title"><a href="">Data Science apps</a></h4>
-            <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident</p>
+            <p class="description">I am excited to offer my expertise in Data Science.
+               As a seasoned Data Scientist, I possess a strong foundation in statistical analysis,
+                machine learning, and data visualization techniques. I am dedicated to helping organizations 
+                extract valuable insights from complex datasets to drive data-informed decision-making. 
+                From data exploration and preprocessing to building predictive models and conducting
+                 advanced statistical analyses.</p>
           </div>
           <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="100">
             <div class="icon"><i class="bi bi-card-checklist"></i></div>
             <h4 class="title"><a href="">machine learning apps</a></h4>
-            <p class="description">Minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat tarad limino ata</p>
+            <p class="description">I am thrilled to offer my expertise as a Machine 
+              Learning Engineer. With a deep passion for data-driven solutions and a
+               strong background in machine learning algorithms and model development,
+                I am dedicated to delivering cutting-edge solutions tailored to meet the 
+                unique challenges of your project. </p>
           </div>
           <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="200">
             <div class="icon"><i class="bi bi-bar-chart"></i></div>
             <h4 class="title"><a href="">NLP Based apps</a></h4>
-            <p class="description">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur</p>
+            <p class="description"> I am delighted to offer my expertise in Natural Language 
+              Processing (NLP). As an experienced NLP practitioner, I possess a deep understanding
+               of linguistic structures, text analysis, and language modeling techniques. 
+               I am passionate about leveraging the power of NLP to extract meaningful insights 
+               from unstructured text data and enable automated language processing. From sentiment 
+               analysis and text classification to entity recognition and topic modeling.</p>
           </div>
           <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="300">
             <div class="icon"><i class="bi bi-binoculars"></i></div>
             <h4 class="title"><a href="">computer vision</a></h4>
-            <p class="description">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+            <p class="description">I am thrilled to offer my expertise in Computer Vision.
+               As a skilled Computer Vision practitioner, I possess a deep understanding
+                of image and video processing techniques, object detection and recognition, 
+                and deep learning architectures. I am passionate about harnessing the power
+                 of Computer Vision to extract valuable information from visual data and enable
+                  automated visual analysis.</p>
           </div>
           <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="400">
             <div class="icon"><i class="bi bi-brightness-high"></i></div>
             <h4 class="title"><a href="">python web apps</a></h4>
-            <p class="description">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque</p>
+            <p class="description"> I am excited to offer my expertise in developing Python web applications.
+               With a strong command of web frameworks such as fastApi and Flask, streamlit,HTML, css ,bootstrape ,  web scraping
+               I specialize in building dynamic and responsive web applications that 
+               cater to your specific needs. From designing intuitive user interfaces 
+               to implementing secure authentication systems and managing databases</p>
           </div>
           <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="500">
             <div class="icon"><i class="bi bi-calendar4-week"></i></div>
             <h4 class="title"><a href="">Data analysis</a></h4>
-            <p class="description">Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi</p>
+            <p class="description"> I am pleased to offer my expertise in Data Analysis.
+               As a skilled data analyst, I possess a strong foundation in statistical analysis,
+                data visualization, and exploratory data analysis techniques.
+                 I am passionate about uncovering insights and patterns
+                  hidden within complex datasets to drive informed decision-making.
+                   With proficiency in data analysis tools such as Python, power Bi, and SQL.</p>
           </div>
         </div>
 
@@ -536,7 +585,10 @@
 
         <div class="section-title">
           <h2>Testimonials</h2>
-          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+          <p>Don't just take my word for it—here are what some of my Seniors have to say about their experiences.
+            and my Seniors working in Flipkart , accenture, walmart,uber,TCS,american-express and many more,
+             These testimonials are a testament to the quality of my work, my professionalism,
+              and my commitment to delivering exceptional results during my learning journey.</p>
         </div>
 
         <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
