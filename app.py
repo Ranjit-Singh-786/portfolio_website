@@ -11,9 +11,9 @@ def home():
 def resume():
     return render_template('inner-page.html')
 
-@app.route('/projects')
-def projects():
-    return render_template('project.html')
+# @app.route('/projects')
+# def projects():
+#     return render_template('project.html')
 
 @app.route('/nlpprojects')
 def nlpprojects():
