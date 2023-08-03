@@ -422,11 +422,13 @@
       </div>
       <hr color="black">
       <div class="resum-downloader">
-        <h4> Get the resume pdf or see preview of resume click on below button.</h4>
-
+        <h4 style="margin-left: 20px;"> To See or Download the Resume Click On Below Button.</h4>
+        <a href="https://flowcv.com/resume/5pjchvng4q" style="margin-left: 20px;"><button class="btn btn-primary btn-lg btn-block">Resume Preview</button></a>
+<hr>
         <form action="{{ url_for('resume') }}">
-          <button type="submit" class="btn btn-primary btn-lg btn-block">preview & Download  <i class="bi bi-download"></i></button>
+          <button type="submit" class="btn btn-primary btn-lg btn-block" style="margin-left: 20px;">Download Resume <i class="bi bi-download"></i></button>
         </form>
+
         <hr color="black">
       </div>
     </section><!-- End Resume Section -->
